@@ -11,6 +11,7 @@ function Tarefa({texto}) {
     }
 
     return (<li><input type="checkbox" onChange={alternarConcluida}/><span className={ concluida ? 'concluida' : '' }>{texto}</span><button>Remover</button></li>)
+    // TODO funcionalidade de "remover"
 }
 
 export default Tarefa;
