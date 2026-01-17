@@ -15,14 +15,14 @@ function Home() {
         setTimeout(() => {
             setProdutos([
                 {
-                    id: 1,
+                    key: 1,
                     nome: "Camiseta branca",
                     preco: "79,90",
                     descricao: "Camiseta confortável para devs.",
                     imagem: "https://images.pexels.com/photos/6001415/pexels-photo-6001415.jpeg"
                 },
                 {
-                    id: 2,
+                    key: 2,
                     nome: "Caneca",
                     preco: "39,90",
                     descricao: "Ideal para café durante o código.",
@@ -33,11 +33,12 @@ function Home() {
         }, 2000);
     }, []);
 
+    console.log(produtos.length);
     function handleSubmit(e) {
         e.preventDefault();
 
         const novoProduto = {
-            id: Date.now(),
+            key: produtos.length + 1,
             imagem,
             nome,
             preco,
@@ -58,7 +59,7 @@ function Home() {
             {/* Formulário */}
             <form onSubmit={handleSubmit} className="form">
                 <input
-                    type="img"
+                    type="link"
                     placeholder="Imagem do produto"
                     value={imagem}
                     onChange={(e) => setImagem(e.target.value)}
