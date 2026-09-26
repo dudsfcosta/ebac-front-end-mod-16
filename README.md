@@ -1,4 +1,4 @@
-🎓 EBAC — Módulo 16: Catálogo de Produtos (React + Vite)
+# 🎓 EBAC — Módulo 16: Catálogo de Produtos (React + Vite)
 
 ## 📖 Sobre
 
